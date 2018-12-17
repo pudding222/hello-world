@@ -1,0 +1,4 @@
+#!/bin/bash
+apt-get install python
+apt-get install python-pip
+pip install -r /tmp/helloworld/requirements.txt
