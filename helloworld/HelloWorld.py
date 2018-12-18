@@ -11,7 +11,7 @@ class HelloWorld(object):
         return "<html>Hello World</html>" # This should be rendered using Jinja or something else
 
 
-   def encodeHeaders(self,headers):
+    def encodeHeaders(self,headers):
         encodedHeaders = []
         for k,values in sorted(headers.items()):
             if not isinstance(values, list):
