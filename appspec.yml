@@ -2,7 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /tmp/helloworld
+    destination: /usr/local/dan
+  - source: /conf/demo.conf
+    destination: /etc/apache2/conf-enabled/demo.conf
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies
