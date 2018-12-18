@@ -1,2 +1,2 @@
 #!/bin/bash
-killall python
+service apache2 stop

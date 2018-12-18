@@ -42,7 +42,7 @@ setup(
     keywords='helloworld python',
     packages=["helloworld", "helloworld.test"],
     include_package_data=True,
-    install_requires=['flask >= 0.10.1'],
+    install_requires=[],
     test_suite="helloworld.test.all",
     extras_require={
         'test': ['pep8'],

@@ -1,2 +1,2 @@
 #!/bin/bash
-python /tmp/helloworld/helloworld/HelloWorld.py &
+service apache2 start

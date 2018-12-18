@@ -1,4 +1,3 @@
 #!/bin/bash
-apt-get install python
-apt-get install python-pip
+apt-get install apache2 apache2-utils libexpat1 ssl-cert python python-pip libapache2-mod-wsgi
 pip install -r /tmp/helloworld/requirements.txt

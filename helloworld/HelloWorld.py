@@ -1,17 +1,22 @@
-from flask import Flask
-app = Flask(__name__)
 
 class HelloWorld(object):
 
-    def method1(self):
-        return "Hello World2"
+    def __init__(self, environ):
+        self.environ = environ
+        super(HelloWorld,self).__init__()
+        self.headers = []
         
-    def main(self):
-        return self.method1()
-        
-@app.route("/")
-def hello():
-    return HelloWorld().main()
 
-if (__name__ == "__main__"):
-    app.run(port = 5000)
+    def getContent(self):
+        return "Hello World" # This should be rendered using Jinja or something else
+
+    def main(self):
+        content = self.getContent()
+        return (content,self.headers)
+        
+def application(environ, start_response):
+    klass = HelloWorld(environ)
+    (response, headers) = klass.main()
+    start_response("200 OK",headers)
+    return [response]
+    

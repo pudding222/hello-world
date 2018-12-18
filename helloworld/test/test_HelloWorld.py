@@ -9,6 +9,10 @@ import os
 
 class Test_HelloWorld(unittest.TestCase):
 
-    def test__method1(self):
-        self.assertEquals("Hello World2",helloworld.HelloWorld().method1())
+    def setUp(self):
+        self.environ = {}
+        self.klass = helloworld.HelloWorld(self.environ)
+
+    def test__getContent(self):
+        self.assertEquals("Hello World",self.klass.getContent())
         
