@@ -8,7 +8,7 @@ class HelloWorld(object):
         
 
     def getContent(self):
-        return "Hello World" # This should be rendered using Jinja or something else
+        return "<html>Hello World</html>" # This should be rendered using Jinja or something else
 
     def main(self):
         content = self.getContent()
