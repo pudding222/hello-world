@@ -27,7 +27,7 @@ class HelloWorld(object):
 
 
     def main(self):
-        content = [self.getStart()
+        content = [self.getStart(),
                    self.getBody(),
                    "Testing",
                    self.getEnd(),
