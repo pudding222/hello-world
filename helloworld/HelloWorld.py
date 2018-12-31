@@ -7,9 +7,14 @@ class HelloWorld(object):
         self.headers = {"Content-Type":"text/html"
         }
         
-    def getContent(self):
-        return "<html>Hello World</html>" # This should be rendered using Jinja or something else
+    def getStart(self):
+        return "<html>"
+        
+    def getBody(self):
+        return "Hello World" # This should be rendered using Jinja or something else
 
+    def getEnd(self):
+        return "</html>"
 
     def encodeHeaders(self,headers):
         encodedHeaders = []
@@ -22,9 +27,15 @@ class HelloWorld(object):
 
 
     def main(self):
-        content = self.getContent()
+        content = [self.getStart()
+                   self.getBody(),
+                   "Testing",
+                   self.getEnd(),
+                   ]
+        
+        
         headers = self.headers
-        return (content,self.encodeHeaders(headers))
+        return ("\n".join(content),self.encodeHeaders(headers))
         
 def application(environ, start_response):
     klass = HelloWorld(environ)

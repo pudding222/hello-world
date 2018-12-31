@@ -13,6 +13,6 @@ class Test_HelloWorld(unittest.TestCase):
         self.environ = {}
         self.klass = helloworld.HelloWorld(self.environ)
 
-    def test__getContent(self):
-        self.assertEquals("<html>Hello World</html>",self.klass.getContent())
+    def test__getBody(self):
+        self.assertEquals("Hello World",self.klass.getBody())
         
