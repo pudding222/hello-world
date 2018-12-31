@@ -24,7 +24,7 @@ class HelloWorld(object):
     def main(self):
         content = self.getContent()
         headers = self.headers
-        return (content,self.encodedHeaders(headers))
+        return (content,self.encodeHeaders(headers))
         
 def application(environ, start_response):
     klass = HelloWorld(environ)
